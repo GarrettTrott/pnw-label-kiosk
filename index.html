@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Video Slip Kiosk</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="/css/print.css" media="print" rel="stylesheet" />
+  <script src="js/index.js" async></script>
+</head>
+<body>
+  <div id="mainLayout">
+  <div class="title">
+    <h1>Have you purchased Photos or Video?</h1>
+    <h2>Please fill out this form to create a video slip with your information</h2>
+  </div>
+  <div class="container">
+    <div class="wrapper">
+      <ul class="steps">
+        <li class="is-active">Info</li>
+        <li>Package</li>
+        <li>Confirm</li>
+      </ul>
+      <form class="form-wrapper">
+        <fieldset class="section is-active">
+          <h2>Please enter your contact info:</h2>
+          <input type="text" name="firstname" id="firstName" placeholder="First Name" maxlength="20" required autofocus>
+          <input type="text" name="lastname" id="lastName" placeholder="Last Name"maxlength="25" required>
+          <input type="email" name="email" id="email" placeholder="Email Address"  maxlength="48" required>
+          <div class="clear-button" onClick="window.location.reload();">Clear</div>
+          <div class="button" onClick="addName()">Next</div>
+        </fieldset>
+        <fieldset class="section">
+          <h2>Select the video package you purchased</h2>
+          <div class="row cf">
+            <div class="four col">
+              <input type="radio" name="r1" id="r1">
+              <label for="r1">
+                <h4>Photos Only</h4>
+                <h5>$89 (14k ft)</h5>
+                <h6>$99 (18k ft)</h6>
+              </label>
+            </div>
+            <div class="four col">
+              <input type="radio" name="r1" id="r2" checked><label for="r2">
+                <h4>Video + Photos</h4>
+                <h5>$119 (14k ft)</h5>
+                <h6>$129 (18k ft)</h6>
+              </label>
+            </div>
+            <div class="four col">
+              <input type="radio" name="r1" id="r3"><label for="r3">
+                <h4>Deluxe Photos + Video</h4>
+                <h5>$188 (14k ft)</h5>
+                <h6>$198 (18k ft)</h6>
+              </label>
+            </div>
+          </div>
+          <div class="clear-button" onClick="window.location.reload();">Clear</div>
+          <div class="button" onClick="addPackage()">Next</div>
+        </fieldset>
+        <fieldset class="section">
+          <h2>Please confirm Your Information is correct and click "Print":</h2>
+          <div class="confirm">
+            <h1 id="confirmName"></h1>
+            <h1 id="confirmEmail"></h1>
+            <h2 id="packageType"></h2>
+          </div>
+          <div class="clear-button" onClick="window.location.reload();">Start Over</div>
+          <div class="button" onClick="printSlip()">Print</div>
+        </fieldset>
+        <fieldset class="section">
+          <h1>Printing...</h1>
+          <h2>Please wait for slip to print and give it to your <span id="jobTitle"></span> before you board the plane for your jump!</h2>
+          <div class="button">Clear</div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div id="printLayout">
+    <img id="printLogo" src="img/PNWlogo.svg" />
+  <div id="printMessage">
+    Please give this slip to your <span id="printJobTitle"></span> before you board the plane
+  </div>
+    <div id="datetime"></div>
+    <div id="printName"></div>
+    <div id="printEmail"></div>
+  <div id="packageContainer">
+    <div id="printPackageType"></div>
+  </div>
+  </div>
+  <script src='js/jquery-3.6.0.js'></script>
+  <script src="js/jq.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

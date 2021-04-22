@@ -1,0 +1,59 @@
+body {
+  background-color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 2.3in;
+  color: #000;
+}
+
+#mainLayout {
+  display: none;
+}
+
+#printLayout {
+  background-color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  max-width: 2.3in;
+  max-height: 4in;
+  color: black;
+}
+
+#printMessage {
+  width: 2.3in;
+  font-size: 100%;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#datetime {
+  height: 0.3in;
+  width: 2.3in;
+  font-size: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#printName,
+#printEmail {
+  font-size: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#packageContainer {
+  height: 0.3in;
+  width: 2in;
+  font-size: 100%;
+  margin-top: 0.6in;
+  padding: 3px;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.printLogo {
+  width: 2.3in;
+  height: 1in;
+}
